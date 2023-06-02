@@ -3,6 +3,8 @@
 cmake_minimum_required(VERSION 3.20.0)
 
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
-project(ivshmem_test_bed)
+project(openamp_rpmsg_over_ivshmem)
 
-target_sources(app PRIVATE src/ivshmem.c)
+target_sources(app PRIVATE
+        src/main.c
+        src/rpmsg_ivshmem_backend.c)
